@@ -1,21 +1,15 @@
 addEventListener("DOMContentLoaded", ()=>{
-// 4. Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
-// ¿Qué figura quiere calcular (Escriba T o C)?
-// Triangulo = base * altura / 2
-// Circulo = PI * radio* radio
+// 5. Escriba un algoritmo que calcule el área de un rectángulo siempre y cuando los lados sean positivos:
+// área triangulo= lado * lado.
 
-let fig = prompt(`Elige la figura a la que le quiere calcular el area, si es Triangulo escriba (T) y si es circulo escriba(C)`)
-
-if (fig == 'T') {
-    let base = Number(prompt("Escribe la base del triangulo: "))
-    let altura = Number(prompt("Escribe la altura del triangulo: "))
-    let area = (base * altura)/2
-    console.log(`El area del triangulo es: ${area}`)
+let lado1 = prompt(`Escribe un lado del rectangulo`)
+let lado2 = prompt(`Escribe un segundo lado del rectangulo`)
+if (lado1 > 0 && lado2 > 0) {
+    let area = lado1 * lado2
+    console.log(`El area del rectangulo es: ${area}`)
 }
-if (fig == 'C') {
-    let radio = Number(prompt("Escribe el radio del circulo: "))
-    let area = Math.PI * radio**2
-    console.log(`El area del circulo es: ${area}`)
+else{
+    console.log(`Los lados no son positivos o un lado no es positivo`)
 }
 
 })
