@@ -1,21 +1,18 @@
 addEventListener("DOMContentLoaded", ()=>{
     
-// 9. Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los 
-// impares. Numero par es aquel que su residuo igual a cero (num mod !=0
+// 10. Calcular el valor total del valor de 5 productos, el IVA y el subtotal, visualizar los resultados de:
+// Iva, Subtotal y Total de la compra de los artículos.
 
+let prod1, prod2, prod3, prod4, prod5, iva, subtotal, total
+prod1= Number(prompt("Ingrese el precio del primer producto: "))
+prod2= Number(prompt("Ingrese el precio del segundo producto: "))
+prod3= Number(prompt("Ingrese el precio del tercer producto: "))
+prod4= Number(prompt("Ingrese el precio del cuarto producto: "))
+prod5= Number(prompt("Ingrese el precio del quinto producto: "))
 
-let canum, sumpar=0, sumimpar=0, j, nu  
-canum= Number(prompt("Ingrese la cantidad de numeros que quiera ingresar: "))
-for ( j= 0; j < canum; j++) {
-    nu= Number(prompt("Ingrese un numero: "))
-    if(nu%2 == 0){
-        sumpar += nu
-    }
-    else{
-        sumimpar +=nu
-    }
-}
-console.log(`La suma de los pares es ${sumpar} y la suma de los impares es ${sumimpar}`)
-alert(`La suma de los pares de ${sumpar} \n La suma de los impares es de ${sumimpar}`)
-
+iva= (prod1 + prod2+ prod3+ prod4+ prod5)*0.19
+subtotal= prod1 + prod2+ prod3+ prod4+ prod5
+total= subtotal + iva
+console.log(`El iva es ${iva}, el subtotal es ${subtotal} y el total es ${total}`)
+alert(`El iva es ${iva}, el subtotal es ${subtotal} y el total es ${total}`)
 })
